@@ -39,7 +39,7 @@ function App() {
     <Container>
       <div className={classes.root}>
         <Grid container spacing={3}>
-          <Grid item xs={8}>
+          <Grid item xs={9}>
             <Paper className={classes.paper}>
               <div className={classes.placeholder}>
                 {!loading ? (
@@ -53,7 +53,7 @@ function App() {
               </Button>
             </Paper>
           </Grid>
-          <Grid item xs>
+          <Grid item xs={3}>
             <Paper className={classes.paper}>
               <Button variant="contained" color="primary">
                 Hello World 2
