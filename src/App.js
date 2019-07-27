@@ -12,6 +12,7 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(2),
     textAlign: 'center',
     color: theme.palette.text.secondary,
+    boxShadow: "none",
   },
 }));
 
@@ -38,8 +39,9 @@ function App() {
   return (
     <Container>
       <div className={classes.root}>
-        <Grid container spacing={3}>
-          <Grid item xs={9}>
+        <h2>E-commerce Shopping</h2>
+        <Grid container spacing={1}>
+          <Grid item xs={9} style={{}}>
             <Paper className={classes.paper}>
               <div className={classes.placeholder}>
                 {!loading ? (

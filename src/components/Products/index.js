@@ -8,7 +8,7 @@ const Products = (props) => {
         <Fragment>
             <Grid item xs={12}>
                 <h1>List of product's</h1>
-                <Grid container justify="start" spacing={2}>
+                <Grid container justify="flex-start" spacing={2}>
                     {
                         products.length > 0 && products.map((p, i) => {
                             return (
