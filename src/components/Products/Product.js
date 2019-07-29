@@ -1,11 +1,15 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Card, CardActionArea, CardActions, CardContent, CardMedia, Button, Typography } from '@material-ui/core';
+import utilsAction from '../../utils/constent';
 
 const useStyles = makeStyles({
     card: {
         maxWidth: 275,
     },
+    buttonRight: {
+        margin: "0 0 0 33%",
+    }
 });
 const Product = props => {
     const { id,
@@ -21,28 +25,27 @@ const Product = props => {
             <CardActionArea>
                 <CardMedia
                     component="img"
-                    alt="Contemplative Reptile"
-                    height="140"
+                    alt={title}
+                    height="240"
                     image={`/static/images/products/${sku}_1.jpg`}
-                    title="Contemplative Reptile"
+                    title={title}
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <Typography gutterBottom variant="h6" component="h6">
                         {title}
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
-            </Typography>
+                        {description}
+                    </Typography>
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button size="small" color="primary">
-                    Share
-          </Button>
-                <Button size="small" color="primary">
-                    Learn More
-          </Button>
+                <Typography variant="body2" color="textSecondary" component="p">
+                    {utilsAction.formatCurrency(price)}
+                </Typography>
+                <Button size="small" variant="contained" color="secondary" className={classes.buttonRight}>
+                    Add to card
+                </Button>
             </CardActions>
         </Card>
     )
